@@ -1,21 +1,10 @@
-
-//inner classes 
+import java.util.function.UnaryOperator;
+//from   w  w  w.j a  va  2  s.c o m
 public class Main {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		outer obj=new outer();  
-		  outer.Inner in=obj.new Inner();  
-		  in.msg();  
-	}
-
+  public static void main(String[] args) {
+    UnaryOperator<String> i  = (x)-> x.toUpperCase();
+    
+    System.out.println(i.apply("java2s.com"));
+  }
 }
-class outer{  
-	 private int data=30;  
-	 class Inner{  
-	  void msg(){System.out.println("data is "+data);}  
-	 }  
-}
-
-	
- 
